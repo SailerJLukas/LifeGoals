@@ -1,0 +1,36 @@
+# Life Goals Roadmap
+
+## Phase 1 - MVP
+
+- [x] Development environment
+- [x] Git
+- [x] GitHub
+- [x] React project
+- [ ] Dashboard
+- [ ] Navigation
+- [ ] Goal model
+- [ ] Add Goal
+- [ ] Goal List
+- [ ] Edit Goal
+- [ ] Delete Goal
+- [ ] Categories
+- [ ] Settings
+
+---
+
+## Phase 2
+
+- [ ] Backend
+- [ ] PostgreSQL
+- [ ] Authentication
+- [ ] Shared goals
+- [ ] Notifications
+
+---
+
+## Phase 3
+
+- [ ] Statistics
+- [ ] Calendar
+- [ ] Mobile responsive improvements
+- [ ] Deployment

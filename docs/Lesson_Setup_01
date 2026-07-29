@@ -1,0 +1,90 @@
+# Lesson 1 – Project Setup
+
+## Objective
+
+Prepare the development environment and create the first React application.
+
+---
+
+## What we installed
+
+- Visual Studio Code
+- Node.js
+- npm
+- Git
+- GitHub account
+
+---
+
+## Project structure
+
+LifeGoals/
+│
+├── client/
+├── server/
+├── docs/
+
+---
+
+## Technologies
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+
+### Version Control
+
+- Git
+- GitHub
+
+---
+
+## What we learned
+
+- How to install Node.js
+- What npm is
+- How to create a React project with Vite
+- Basic project structure
+- How to run the development server
+- How Hot Reload works
+- Basic Git commands
+
+---
+
+## Git commands used
+
+```bash
+git init
+
+git add .
+
+git commit -m "Initial project setup"
+
+git branch -m master main
+
+git remote add origin https://github.com/SailerLukas/LifeGoals.git
+
+git push -u origin main
+```
+
+---
+
+## Result
+
+✅ React application is running.
+
+✅ Git repository created.
+
+✅ Connected to GitHub.
+
+✅ First commit uploaded.
+
+---
+
+## Notes
+
+The project currently contains only the basic application.
+
+The next lesson will replace the Vite demo with our own application structure.
