@@ -1,0 +1,156 @@
+Absolutely! We ended today at a really good point. We didn't rush into React components—we built the foundation first. That will pay off later.
+
+Here's a short summary you can paste into your `Lesson_Setup_01` (or create a new `Lesson_02.md`).
+
+---
+
+# Lesson 02 – Data Models & TypeScript Interfaces
+
+## Goal
+
+Learn how React + TypeScript organizes data before building components.
+
+---
+
+## What I learned
+
+### 1. Interface vs Class
+
+Unlike Java, React applications usually use **interfaces** instead of classes for data models.
+
+* Java class = blueprint + object creation
+* TypeScript interface = blueprint only
+
+The interface does **not** store data.
+
+It only defines how data should look.
+
+---
+
+### 2. Objects store the data
+
+The actual information is stored inside objects.
+
+Example:
+
+```text
+Goal Interface
+        ↓
+Goal Object
+        ↓
+GoalCard Component
+        ↓
+Dashboard
+```
+
+---
+
+### 3. Separation of Concerns
+
+Each file has one responsibility.
+
+```text
+Goal.ts
+    Defines what a Goal is.
+
+GoalCard.tsx
+    Displays one Goal.
+
+Dashboard.tsx
+    Displays many GoalCards.
+
+App.tsx
+    Starts the application.
+```
+
+---
+
+### 4. Project structure
+
+```text
+src/
+
+components/
+pages/
+layouts/
+services/
+hooks/
+styles/
+types/
+    Goal.ts
+```
+
+---
+
+### 5. Created first domain model
+
+Created:
+
+```text
+types/Goal.ts
+```
+
+Containing:
+
+* id
+* title
+* shortDescription
+* benefit
+* category
+* createdAt
+* startDate
+* deadline
+* priority
+* progress
+* completed
+* targetValue
+* currentValue
+* valueDescription
+
+---
+
+## Important concepts
+
+* Interface
+* Object
+* Import
+* Data Model
+* Separation of Concerns
+
+---
+
+## Next lesson
+
+1. Import the `Goal` interface into `App.tsx`.
+
+```ts
+import type { Goal } from "./types/Goal";
+```
+
+2. Create the first object:
+
+```ts
+const firstGoal: Goal = {
+    ...
+};
+```
+
+3. Let TypeScript guide us by showing which properties are required.
+
+4. Learn how interfaces validate objects.
+
+5. After that, create an array of goals (`Goal[]`) and later render them with React components.
+
+---
+
+## What I understood today
+
+React doesn't think in terms of **classes creating objects** like Java.
+
+Instead:
+
+* Interfaces define the shape of the data.
+* Objects hold the data.
+* Components receive the data and display it.
+
+---

@@ -1,13 +1,46 @@
 # User Stories
 
-## US-001
+# US-001 - Create Goal
 
+## Title
+Create a new goal
+
+## Description
 As a user,
+I want to create a new goal,
+so that I can track my personal progress.
 
-I want to create a goal,
+## Business Value
+Users need a central place to manage long-term and short-term objectives.
 
-so that I can track my progress.
+## Priority
+High
 
+## Acceptance Criteria
+
+- User can enter a goal title.
+- User can choose a category.
+- User can select the goal type.
+- User can set a deadline (optional).
+- User can choose between:
+  - Numeric goal
+  - Checklist goal
+- Goal is saved successfully.
+- Goal appears on the Dashboard.
+
+## UI
+
+Create Goal dialog
+
+## Dependencies
+
+None
+
+## Future Improvements
+
+- Goal templates
+- AI-generated milestones
+- Goal duplication
 ---
 
 ## US-002
@@ -27,3 +60,107 @@ As a user,
 I want reminders,
 
 so that I don't forget important milestones.
+
+## US-004 – Landing page
+
+### Description
+
+As a visitor,
+I want to understand the purpose of Life Goals and see clear login and
+registration options,
+so that I can decide whether to use the application.
+
+### Business Value
+
+The landing page introduces the product and guides new and returning users
+to the correct next action.
+
+### Acceptance Criteria
+
+- The application displays a public landing page before login.
+- The main login and sign-up area is displayed prominently.
+- The page contains the slogan:
+  "Are you ready to make your days more meaningful?"
+- The page contains an About Us section.
+- The layout works on desktop and mobile devices.
+- A returning user can open the login form.
+- A new user can open the registration form.
+
+### Priority
+
+High
+
+### MVP
+
+Yes
+## US-005 – Goal dashboard
+
+### Description
+
+As an authenticated user,
+I want to view, create, and complete my goals,
+so that I can manage my progress from one place.
+
+### Acceptance Criteria
+
+- The user can see active goals.
+- The user can create a new goal.
+- The user can mark an applicable goal or milestone as completed.
+- The dashboard displays basic progress information.
+- Completed and active goals are visually distinguishable.
+
+### Priority
+
+High
+
+### MVP
+
+Yes
+## US-006 – Goal details
+
+### Description
+
+As an authenticated user,
+I want to open the details of a goal,
+so that I can review its description, milestones, deadline, and progress.
+
+### Acceptance Criteria
+
+- Every goal can be opened from the dashboard.
+- The detail page displays the goal title and description.
+- It displays the category and goal type.
+- It displays the deadline when one exists.
+- It displays current and target values for numeric goals.
+- It displays milestones or checklist items where applicable.
+
+### Priority
+
+High
+
+### MVP
+
+Yes
+## US-008 – Milestone encouragement
+
+### Description
+
+As a user,
+I want to receive encouraging feedback after completing a milestone,
+so that completing goals feels rewarding and motivating.
+
+### Acceptance Criteria
+
+- Completing a milestone triggers a feedback message.
+- The message does not block the user from continuing.
+- Feedback may contain practical advice, encouragement, or a light joke.
+- The user can choose the preferred feedback style.
+- The same message should not be shown repeatedly in a short period.
+- The user can disable these messages in settings.
+
+### Priority
+
+Low
+
+### MVP
+
+No

@@ -6,7 +6,7 @@
 - [x] Git
 - [x] GitHub
 - [x] React project
-- [ ] Dashboard
+- [x] Dashboard
 - [ ] Navigation
 - [ ] Goal model
 - [ ] Add Goal
@@ -34,3 +34,33 @@
 - [ ] Calendar
 - [ ] Mobile responsive improvements
 - [ ] Deployment
+
+# Version 1.0
+
+## Authentication
+- Landing page
+- Login
+- Registration
+
+## Dashboard
+- View goals
+- Create goal
+- Edit goal
+- Delete goal
+
+## Goal Details
+- Description
+- Milestones
+- Progress
+
+# Version 1.1
+
+- Charts
+- Statistics
+- Notifications
+
+# Version 1.2
+
+- Sharing
+- AI advice
+- Motivational jokes
