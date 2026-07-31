@@ -1,6 +1,32 @@
 import "./App.css";
+import type { Goal } from "./features/goals/models/Goal";
 
 function App() {
+
+  const reactGoal: Goal = {
+    id: 1,
+    title: "Learn React",
+    shortDescription: "Complete the React fundamentals.",
+    benefit: "Become a better frontend developer.",
+    category: "Education",
+
+    createdAt: new Date(),
+    startDate: new Date(),
+    deadline: new Date("2026-10-31"),
+
+    priority: 3,
+    progress: 10,
+    completed: false,
+    milestones: [],
+
+    targetValue: 30,
+    currentValue: 3,
+    valueDescription: "Lessons completed"
+};
+
+const goals: Goal[] = [
+  reactGoal
+];
   return (
     <div className="app">
       <header className="topbar">
@@ -22,7 +48,7 @@ function App() {
         <section className="welcome-section">
           <div>
             <p className="eyebrow">PERSONAL DASHBOARD</p>
-            <h2>Good afternoon, Lukas</h2>
+            <h2>{goals[0].title}</h2>
             <p className="welcome-text">
               Keep moving forward. Every completed step brings you closer to
               your goals.

@@ -1,3 +1,5 @@
+import type { Milestone } from "./Milestone";
+
 export interface Goal {
     id: number;
     title: string;
@@ -11,6 +13,7 @@ export interface Goal {
 
     priority: number;
     progress: number;
+    milestones: Milestone[];
     completed: boolean;
 
     targetValue: number;
