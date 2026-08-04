@@ -1,41 +1,42 @@
 import type { Goal } from "../models/Goal";
 
 interface GoalCardProps {
-    goal: Goal;
+  goal: Goal;
 }
 
 function GoalCard({ goal }: GoalCardProps) {
-    return (
-        <article className="goal-card">
-            <p className="goal-card__category">
-                {goal.category}
-            </p>
+  return (
+    <article className="goal-card">
+      <div className="goal-card-header">
+        <span className="category-badge">{goal.category}</span>
 
-            <h3 className="goal-card__title">
-                {goal.title}
-            </h3>
+        <button className="menu-button" type="button">
+          ⋯
+        </button>
+      </div>
 
-            <p className="goal-card__description">
-                {goal.shortDescription}
-            </p>
+      <h3>{goal.title}</h3>
 
-            <div className="goal-card__progress">
-                <div className="goal-card__progress-info">
-                    <span>Progress</span>
-                    <span>{goal.progress}%</span>
-                </div>
+      <p>{goal.shortDescription}</p>
 
-                <progress
-                    value={goal.progress}
-                    max={100}
-                />
-            </div>
+      <div className="progress-information">
+        <span>
+          {goal.currentValue} of {goal.targetValue} {goal.valueDescription}
+        </span>
 
-            <p className="goal-card__deadline">
-                Deadline: {goal.deadline.toLocaleDateString()}
-            </p>
-        </article>
-    );
+        <strong>{goal.progress}%</strong>
+      </div>
+
+      <progress value={goal.progress} max={100}>
+        {goal.progress}%
+      </progress>
+
+      <div className="goal-footer">
+        <span>Deadline</span>
+        <strong>{goal.deadline.toLocaleDateString()}</strong>
+      </div>
+    </article>
+  );
 }
 
 export default GoalCard;
