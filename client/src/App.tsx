@@ -1,4 +1,6 @@
+import { useState } from "react";
 import "./App.css";
+import GoalForm from "./features/goals/components/GoalForm";
 import GoalCard from "./features/goals/components/GoalCard";
 import type { Goal } from "./features/goals/models/Goal";
 
@@ -43,8 +45,18 @@ function App() {
     currentValue: 3,
     valueDescription: "Lessons completed",
   };
-  const goals: Goal[] = [reactGoal, typeScriptGoal];
+  const [goals, setGoals] = useState<Goal[]>([reactGoal,typeScriptGoal]);
 
+  const [showGoalForm, setShowGoalForm] = useState(false);
+
+  function addGoal(newGoal: Goal) {
+  setGoals((currentGoals) => [
+    ...currentGoals,
+    newGoal,
+  ]);
+
+  setShowGoalForm(false);
+}
   return (
     <div className="app">
       <header className="topbar">
@@ -74,7 +86,7 @@ function App() {
             </p>
           </div>
 
-          <button className="primary-button" type="button">
+          <button className="primary-button" type="button" onClick={()=> setShowGoalForm(true)}>
             <span>+</span>
             Add goal
           </button>
@@ -100,6 +112,12 @@ function App() {
           </article>
         </section>
 
+        {showGoalForm && (
+  <GoalForm
+    onAddGoal={addGoal}
+    onCancel={() => setShowGoalForm(false)}
+  />
+)}
         <section className="content-section">
           <div className="section-heading">
             <div>
